@@ -431,8 +431,8 @@ trait Future[+T] extends Awaitable[T] {
     p.future
   }
 
-  private def feedPromise[S](promise: Promise[S]): Try[S] => Unit =
-    tried => promise.complete(tried)
+  private def feedPromise[S](promise: Promise[S]) =
+    promise.complete(_: Try[S])
 }
 
 
