@@ -1,6 +1,6 @@
 import scala.io.StdIn
 
-trait ArraySetup {
+abstract class ArraySetup {
   // Pick a large number
   val arraySize = 1000000
   // Make sure that we will hit OOME if Promise Linking doesn't work
